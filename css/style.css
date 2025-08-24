@@ -1,8 +1,6 @@
 /**************** extend css start ****************/
 /**************** extend css start ****************/
 /**************** common css start ****************/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 /* Custom Font Declaration */
 @font-face {
   font-family: 'Modernline';
@@ -11,9 +9,27 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Sukhumvit Set Font Declaration */
+@font-face {
+  font-family: 'Sukhumvit Set';
+  src: url('../fonts/sukhumvit-set-text.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bangla MN Font Declaration */
+@font-face {
+  font-family: 'Bangla MN';
+  src: url('../fonts/Bangla MN.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /* line 3, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_common.scss */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -184,13 +200,13 @@ a:hover {
 /* line 90, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_common.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #182028;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   font-weight: 500;
 }
 
 /* line 94, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_common.scss */
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   line-height: 28px;
   font-size: 15px;
   margin-bottom: 0px;
@@ -391,7 +407,7 @@ a:focus, .button:focus, button:focus, .btn:focus {
   font-size: 36px;
   color: #995433;
   line-height: 54px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sukhumvit Set', sans-serif;
   font-weight: 500;
   position: relative;
   text-transform: uppercase;
@@ -417,7 +433,7 @@ a:focus, .button:focus, button:focus, .btn:focus {
   text-transform: capitalize;
   line-height: 27px;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -741,7 +757,7 @@ ul {
   display: inline-block;
   background-color: transparent;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
@@ -794,7 +810,7 @@ ul {
   border-radius: 50px;
   background-color: #182028;
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   font-weight: 500;
   color: #999999;
   -webkit-transition: 0.5s;
@@ -2374,6 +2390,10 @@ ul {
 
 /**************menu part start*****************/
 /* line 3, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_menu.scss */
+.main_menu {
+  background-color: #EBE0D8;
+}
+
 .main_menu .navbar-brand {
   padding-top: 0rem;
   padding-bottom: 0px;
@@ -2394,7 +2414,7 @@ ul {
   color: #1e2528;
   font-size: 14px;
   padding: 39px 23px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   text-transform: uppercase;
   line-height: 12px;
   font-weight: 500;
@@ -2451,6 +2471,10 @@ ul {
 
 /* line 68, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_menu.scss */
 .menu_fixed .nav-link {
+  color: #995433 !important;
+}
+
+.nav-link {
   color: #995433 !important;
 }
 
@@ -2606,6 +2630,7 @@ ul {
   display: table;
   width: 100%;
   height: 900px;
+  padding-left: 150px;
 }
 
 /* line 13, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
@@ -2631,6 +2656,11 @@ ul {
   /* line 9, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
   .banner_part .banner_text {
     height: 650px;
+    padding-left: 0px;
+  }
+
+  .banner_part .banner_text .banner_text_iner {
+    vertical-align: baseline;
   }
 }
 
@@ -2643,18 +2673,29 @@ ul {
 
 /* line 33, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
 .banner_part .banner_text h1 {
-  font-size: 60px;
-  text-transform: uppercase;
+  font-size: 70px;
   font-weight: 500;
   margin: 24px 0 29px;
   line-height: 60px;
   color: #fff;
+  font-family: "Bangla MN", serif;
+}
+
+.banner_part .banner_text h1 span {
+  margin-top: 15px;
+  display: block;
+  font-size: 50px;
+}
+
+.banner_part .banner_text p {
+  font-size: 24px;
+  font-family: "Sukhumvit Set", sans-serif;
 }
 
 @media (max-width: 991px) {
   /* line 33, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
   .banner_part .banner_text h1 {
-    font-size: 30px;
+    font-size: 50px;
     line-height: 1.3;
     margin: 10px 0;
   }
@@ -2821,7 +2862,7 @@ ul {
 .feature_part .feature_part_text .feature_part_text_iner h4 {
   font-size: 40px;
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
 }
 
 /* line 88, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_feature_part.scss */
@@ -3052,6 +3093,7 @@ ul {
 .about_us .about_us_text p {
   font-size: 15px;
   margin-bottom: 53px;
+  text-align: center;
 }
 
 /* Enhanced about us styles - 2 column layout */
@@ -3688,7 +3730,7 @@ ul {
 /* line 17, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_catagory_post.scss */
 .catagory_post .single_catagory_post .post_text_1 h5 {
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 13px;
@@ -4055,7 +4097,7 @@ ul {
   color: #a7a8a9;
   text-align: left;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   margin-bottom: 25px;
 }
 
@@ -4152,9 +4194,9 @@ ul {
 }
 
 /* line 99, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_review_part.scss */
-.review_part .owl-dots {
+/* .review_part .owl-dots {
   padding-top: 33px;
-}
+} */
 
 /* line 102, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_review_part.scss */
 .review_part .owl-dots button.owl-dot {
@@ -4287,7 +4329,7 @@ ul {
   font-weight: 600;
   color: #995433;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sukhumvit Set', sans-serif;
 }
 
 .review_part_text p {
@@ -6214,7 +6256,7 @@ h6 {
 /* line 5, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_copyright_part.scss */
 .copyright_part p {
   color: #8a8a8a;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   font-weight: 300;
 }
 
@@ -7028,7 +7070,8 @@ h6 {
 .nav-center .navbar-brand {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Bangla MN", serif;
+  color: #995433 !important;
   letter-spacing: 3px;
 }
 
@@ -7230,7 +7273,7 @@ h6 {
   background-color: transparent;
   border: 2px solid #e8e8e8;
   color: #888888;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -7676,7 +7719,7 @@ h6 {
   font-weight: 600;
   color: #2c3e50;
   line-height: 1.4;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   text-transform: none;
   letter-spacing: 0.5px;
   flex: 1;
@@ -7756,7 +7799,7 @@ h6 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   color: #fff;
 }
 
@@ -7957,3 +8000,289 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Testimonial Grid Styles */
+.testimonial-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #995433, #c17f59);
+}
+
+.testimonial-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-image img {
+  border: 4px solid #f8f9fa;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-image img {
+  border-color: #995433;
+  transform: scale(1.05);
+}
+
+.testimonial-card .quote_icon {
+  color: #995433;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.testimonial-card .rating_stars {
+  color: #ffc107;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card h4 {
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.testimonial-card .client_info h5 {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.testimonial-card .client_location {
+  color: #888;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Responsive adjustments for testimonial grid */
+@media (max-width: 768px) {
+  .testimonial-card {
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-card h4 {
+    font-size: 16px;
+  }
+  
+  .testimonial-card p {
+    font-size: 13px;
+  }
+  
+  .testimonial-image img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    padding: 20px 15px !important;
+  }
+  
+  .testimonial-card h4 {
+    font-size: 15px;
+  }
+  
+  .testimonial-card p {
+    font-size: 12px;
+  }
+  
+  .testimonial-image img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+/* Testimonials Carousel Styles */
+.testimonials-carousel-container {
+  position: relative;
+  overflow: visible;
+  padding: 0 50px;
+}
+
+.testimonials-carousel {
+  position: relative;
+}
+
+.testimonial-item {
+  padding: 0 15px;
+}
+
+.testimonials-carousel .owl-stage {
+  display: flex;
+  align-items: stretch;
+}
+
+.testimonial-image-container {
+  height: 550px;
+  overflow: hidden;
+}
+
+.testimonial-image-container img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media(max-width: 720px) {
+  .testimonial-image-container {
+    height: 350px;
+  }
+
+  .testimonial-content {
+    margin-top: 20px;
+  }
+
+  .testimonial-image-container img {
+    object-position: top;
+  }
+}
+
+.testimonials-carousel .owl-stage-outer {
+  padding-bottom: 50px;
+}
+
+.testimonials-carousel .owl-item {
+  display: flex;
+  height: auto;
+}
+
+.testimonials-carousel .testimonial-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Carousel Navigation */
+.testimonials-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.testimonials-carousel .owl-prev,
+.testimonials-carousel .owl-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(153, 84, 51, 0.9) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  border: none !important;
+}
+
+.testimonials-carousel .owl-prev:hover,
+.testimonials-carousel .owl-next:hover {
+  background: rgba(153, 84, 51, 1) !important;
+  transform: scale(1.1);
+}
+
+.testimonials-carousel .owl-prev {
+  left: -50px;
+}
+
+.testimonials-carousel .owl-next {
+  right: -50px;
+}
+
+/* Carousel Dots */
+.testimonials-carousel .owl-dots {
+  text-align: center;
+}
+
+.testimonials-carousel .owl-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #ddd !important;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.testimonials-carousel .owl-dot.active {
+  background: #995433 !important;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 768px) {
+  .testimonials-carousel-container {
+    padding: 0px;
+  }
+  
+  .testimonials-carousel .owl-prev,
+  .testimonials-carousel .owl-next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .testimonials-carousel .owl-prev {
+    left: -45px;
+  }
+  
+  .testimonials-carousel .owl-next {
+    right: -45px;
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .testimonials-carousel .owl-prev,
+  .testimonials-carousel .owl-next {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .testimonials-carousel .owl-prev {
+    left: -35px;
+  }
+  
+  .testimonials-carousel .owl-next {
+    right: -35px;
+  }
+  
+
+}

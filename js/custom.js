@@ -116,6 +116,57 @@
     });
   }
 
+  // Testimonials Carousel
+  var testimonialsCarousel = $('.testimonials-carousel');
+  if (testimonialsCarousel.length) {
+    testimonialsCarousel.owlCarousel({
+      items: 3,
+      loop: true,
+      dots: true,
+      nav: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayTimeout: 4000,
+      autoplaySpeed: 800,
+      navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
+      responsive: {
+        0: {
+          items: 1,
+          margin: 20,
+          nav: false
+        },
+        576: {
+          items: 1,
+          margin: 30,
+          nav: false
+        },
+        768: {
+          items: 2,
+          margin: 30,
+          nav: true
+        },
+        992: {
+          items: 3,
+          margin: 30,
+          nav: true
+        }
+      },
+      onInitialized: function() {
+        // Ensure equal height for all testimonial cards
+        setTimeout(function() {
+          var maxHeight = 0;
+          $('.testimonials-carousel .testimonial-card').each(function() {
+            var height = $(this).outerHeight();
+            if (height > maxHeight) {
+              maxHeight = height;
+            }
+          });
+          $('.testimonials-carousel .testimonial-card').css('height', maxHeight + 'px');
+        }, 100);
+      }
+    });
+  }
+
   // Portfolio Categories Tabs functionality
   $('#portfolioTabs a[data-toggle="tab"]').on('click', function (e) {
     e.preventDefault();
