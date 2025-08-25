@@ -2394,12 +2394,6 @@ ul {
   background-color: #EBE0D8;
 }
 
-.main_menu .navbar-brand {
-  padding-top: 0rem;
-  padding-bottom: 0px;
-}
-
-/* line 8, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_menu.scss */
 .main_menu .navbar {
   padding: 0px;
 }
@@ -7113,6 +7107,7 @@ h6 {
     padding: 0;
     flex: 0 0 auto;
     margin: auto;
+    color: #995433;
   }
   
   /* Mobile toggle button */
@@ -7981,6 +7976,78 @@ h6 {
 .faq_item .faq_question[aria-expanded="true"] {
   background: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
+}
+
+/* Testimonial Read More Styles */
+.testimonial-text-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-text.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.read-more-btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #995433;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more-btn:hover {
+  background: #995433;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(153, 84, 51, 0.3);
+}
+
+.read-more-btn.hidden {
+  display: none;
+}
+
+/* Responsive adjustments for testimonial text */
+@media (max-width: 768px) {
+  .testimonial-text {
+    -webkit-line-clamp: 3;
+  }
+  
+  .read-more-btn {
+    padding: 6px 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-text {
+    -webkit-line-clamp: 3;
+  }
+  
+  .read-more-btn {
+    padding: 5px 14px;
+    font-size: 10px;
+  }
 }
 
 .faq_item .faq_question[aria-expanded="true"] h4 {

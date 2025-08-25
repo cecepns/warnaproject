@@ -214,4 +214,54 @@
     }
   });
 
+  // Testimonial Read More Functionality
+  $(document).ready(function() {
+    // Check if text needs read more button
+    $('.testimonial-text').each(function() {
+      var $text = $(this);
+      var $container = $text.closest('.testimonial-text-container');
+      var $button = $container.find('.read-more-btn');
+      
+      // Check if text is truncated (more than 4 lines)
+      if ($text[0].scrollHeight > $text[0].clientHeight) {
+        $button.show();
+      } else {
+        $button.hide();
+      }
+    });
+
+    // Read More button click handler
+    $(document).on('click', '.read-more-btn', function() {
+      var $button = $(this);
+      var $container = $button.closest('.testimonial-text-container');
+      var $text = $container.find('.testimonial-text');
+      
+      if ($text.hasClass('expanded')) {
+        // Collapse text
+        $text.removeClass('expanded');
+        $button.text('Read More');
+        $text.css('display', '-webkit-box');
+      } else {
+        // Expand text
+        $text.addClass('expanded');
+        $button.text('Read Less');
+        $text.css('display', 'block');
+      }
+      
+      // Recalculate carousel heights after text expansion/collapse
+      if (testimonialsCarousel.length) {
+        setTimeout(function() {
+          var maxHeight = 0;
+          $('.testimonials-carousel .testimonial-card').each(function() {
+            var height = $(this).outerHeight();
+            if (height > maxHeight) {
+              maxHeight = height;
+            }
+          });
+          $('.testimonials-carousel .testimonial-card').css('height', maxHeight + 'px');
+        }, 300);
+      }
+    });
+  });
+
 }(jQuery));
