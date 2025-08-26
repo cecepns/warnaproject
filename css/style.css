@@ -2682,7 +2682,7 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .banner_part .banner_text h1 {
+  .banner_part .banner_text h1 span {
     margin-top: 5px;
   }
 }
