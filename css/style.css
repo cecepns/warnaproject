@@ -2678,12 +2678,17 @@ ul {
 .banner_part .banner_text h1 span {
   margin-top: 15px;
   display: block;
-  font-size: 45px;
+  font-size: 35px;
 }
 
 @media (max-width: 768px) {
   .banner_part .banner_text h1 span {
     margin-top: 5px;
+    font-size: 30px;
+  }
+
+  .banner_part .banner_text h1 br {
+    display: none;
   }
 }
 
