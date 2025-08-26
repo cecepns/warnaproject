@@ -2678,7 +2678,7 @@ ul {
 .banner_part .banner_text h1 span {
   margin-top: 15px;
   display: block;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .banner_part .banner_text p {
@@ -3029,21 +3029,23 @@ ul {
 }
 
 /* line 7, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_about_us.scss */
-/* .about_us .about_us_text h5 {
-  font-size: 14px;
-  color: #a7a8a9;
+.about_us .about_us_text h5 {
+  font-size: 16px;
+  /* color: #a7a8a9; */
   line-height: 14px;
   text-transform: uppercase;
   margin-bottom: 26px;
-} */
+  text-align: center;
+}
 
 /* line 14, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_about_us.scss */
 .about_us .about_us_text h2 {
   font-size: 36px;
   font-weight: 500;
   line-height: 50px;
-  margin-bottom: 44px;
+  margin-bottom: 30px;
   text-transform: uppercase;
+  text-align: center;
   color: #995433;
 }
 
