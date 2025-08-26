@@ -2709,7 +2709,7 @@ ul {
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 33, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
   .banner_part .banner_text h1 {
-    font-size: 40px;
+    font-size: 70px;
     margin-bottom: 15px;
     line-height: 1.4;
   }
