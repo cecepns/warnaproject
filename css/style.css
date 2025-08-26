@@ -2681,6 +2681,12 @@ ul {
   font-size: 45px;
 }
 
+@media (max-width: 768px) {
+  .banner_part .banner_text h1 {
+    margin-top: 5px;
+  }
+}
+
 .banner_part .banner_text p {
   font-size: 24px;
   font-family: "Sukhumvit Set", sans-serif;
