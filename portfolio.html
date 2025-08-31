@@ -65,6 +65,73 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- <style>
+        /* Lazy loading styles */
+        .lazy-image-container {
+            position: relative;
+            background: #f8f9fa;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lazy-image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .lazy-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .lazy-image.loaded {
+            opacity: 1;
+        }
+        
+        .loading-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .tab-content .tab-pane {
+            display: none;
+        }
+        
+        .tab-content .tab-pane.active {
+            display: block;
+        }
+        
+        /* Optimize image loading */
+        .single_gallery_item img {
+            transition: transform 0.3s ease;
+        }
+        
+        .single_gallery_item:hover img {
+            transform: scale(1.05);
+        }
+    </style> -->
 </head>
 
 <body>
@@ -207,222 +274,8 @@
                     <div class="row mt-5">
                         <div class="col-12">
                             <div class="portfolio_gallery masonry-gallery">
-                                <div class="row">
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A1.webp" class="gallery-popup">
-                                                <img src="img/wedding/A1.webp"
-                                                    alt="Wedding Photography - Romantic Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A2.webp" class="gallery-popup">
-                                                <img src="img/wedding/A2.webp" alt="Wedding Photography - Ceremony"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A3.webp" class="gallery-popup">
-                                                <img src="img/wedding/A3.webp"
-                                                    alt="Wedding Photography - Wedding Couple" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A4.webp" class="gallery-popup">
-                                                <img src="img/wedding/A4.webp"
-                                                    alt="Wedding Photography - Special Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A5.webp" class="gallery-popup">
-                                                <img src="img/wedding/A5.webp" alt="Wedding Photography - Celebration"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A6.webp" class="gallery-popup">
-                                                <img src="img/wedding/A6.webp"
-                                                    alt="Wedding Photography - Bride and Groom" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A7.webp" class="gallery-popup">
-                                                <img src="img/wedding/A7.webp"
-                                                    alt="Wedding Photography - Intimate Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A8.webp" class="gallery-popup">
-                                                <img src="img/wedding/A8.webp" alt="Wedding Photography - Love Story"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A9.webp" class="gallery-popup">
-                                                <img src="img/wedding/A9.webp"
-                                                    alt="Wedding Photography - Emotional Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A10.webp" class="gallery-popup">
-                                                <img src="img/wedding/A10.webp"
-                                                    alt="Wedding Photography - Wedding Party" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A11.webp" class="gallery-popup">
-                                                <img src="img/wedding/A11.webp" alt="Wedding Photography - Reception"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A12.webp" class="gallery-popup">
-                                                <img src="img/wedding/A12.webp" alt="Wedding Photography - Dancing"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A13.webp" class="gallery-popup">
-                                                <img src="img/wedding/A13.webp" alt="Wedding Photography - Portrait"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A14.webp" class="gallery-popup">
-                                                <img src="img/wedding/A14.webp"
-                                                    alt="Wedding Photography - Ceremony Details" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A15.webp" class="gallery-popup">
-                                                <img src="img/wedding/A15.webp" alt="Wedding Photography - Family Photo"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A16.webp" class="gallery-popup">
-                                                <img src="img/wedding/A16.webp"
-                                                    alt="Wedding Photography - Bride Portrait" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A17.webp" class="gallery-popup">
-                                                <img src="img/wedding/A17.webp"
-                                                    alt="Wedding Photography - Groom Portrait" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/wedding/A18.webp" class="gallery-popup">
-                                                <img src="img/wedding/A18.webp"
-                                                    alt="Wedding Photography - Wedding Rings" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="row" id="wedding-gallery">
+                                    <!-- Wedding images will be loaded here -->
                                 </div>
                             </div>
                         </div>
@@ -456,366 +309,8 @@
                     <div class="row mt-5">
                         <div class="col-12">
                             <div class="portfolio_gallery masonry-gallery">
-                                <div class="row">
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A1.webp" class="gallery-popup">
-                                                <img src="img/couples/A1.webp"
-                                                    alt="Couples Photography - Romantic Couple" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A2.webp" class="gallery-popup">
-                                                <img src="img/couples/A2.webp" alt="Couples Photography - Love Story"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A3.webp" class="gallery-popup">
-                                                <img src="img/couples/A3.webp"
-                                                    alt="Couples Photography - Together Forever" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A4.webp" class="gallery-popup">
-                                                <img src="img/couples/A4.webp" alt="Couples Photography - Sweet Moments"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A5.webp" class="gallery-popup">
-                                                <img src="img/couples/A5.webp"
-                                                    alt="Couples Photography - Intimate Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A6.webp" class="gallery-popup">
-                                                <img src="img/couples/A6.webp" alt="Couples Photography - Pure Love"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A7.webp" class="gallery-popup">
-                                                <img src="img/couples/A7.webp"
-                                                    alt="Couples Photography - Tender Embrace" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A8.webp" class="gallery-popup">
-                                                <img src="img/couples/A8.webp" alt="Couples Photography - Gentle Touch"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A9.webp" class="gallery-popup">
-                                                <img src="img/couples/A9.webp" alt="Couples Photography - Loving Gaze"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A10.webp" class="gallery-popup">
-                                                <img src="img/couples/A10.webp"
-                                                    alt="Couples Photography - Peaceful Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A11.webp" class="gallery-popup">
-                                                <img src="img/couples/A11.webp" alt="Couples Photography - Shared Joy"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A12.webp" class="gallery-popup">
-                                                <img src="img/couples/A12.webp"
-                                                    alt="Couples Photography - Serene Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A13.webp" class="gallery-popup">
-                                                <img src="img/couples/A13.webp"
-                                                    alt="Couples Photography - Beautiful Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A14.webp" class="gallery-popup">
-                                                <img src="img/couples/A14.webp"
-                                                    alt="Couples Photography - Romantic Setting" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A15.webp" class="gallery-popup">
-                                                <img src="img/couples/A15.webp"
-                                                    alt="Couples Photography - Love Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A16.webp" class="gallery-popup">
-                                                <img src="img/couples/A16.webp"
-                                                    alt="Couples Photography - Sweet Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A17.webp" class="gallery-popup">
-                                                <img src="img/couples/A17.webp"
-                                                    alt="Couples Photography - Intimate Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A18.webp" class="gallery-popup">
-                                                <img src="img/couples/A18.webp"
-                                                    alt="Couples Photography - Beautiful Love" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A19.webp" class="gallery-popup">
-                                                <img src="img/couples/A19.webp"
-                                                    alt="Couples Photography - Romantic Love" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A20.webp" class="gallery-popup">
-                                                <img src="img/couples/A20.webp" alt="Couples Photography - Love Story"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A21.webp" class="gallery-popup">
-                                                <img src="img/couples/A21.webp" alt="Couples Photography - Sweet Love"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A22.webp" class="gallery-popup">
-                                                <img src="img/couples/A22.webp"
-                                                    alt="Couples Photography - Beautiful Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A23.webp" class="gallery-popup">
-                                                <img src="img/couples/A23.webp"
-                                                    alt="Couples Photography - Romantic Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A24.webp" class="gallery-popup">
-                                                <img src="img/couples/A24.webp" alt="Couples Photography - Love Moment"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A25.webp" class="gallery-popup">
-                                                <img src="img/couples/A25.webp" alt="Couples Photography - Sweet Moment"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A26.webp" class="gallery-popup">
-                                                <img src="img/couples/A26.webp"
-                                                    alt="Couples Photography - Beautiful Love Story" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A27.webp" class="gallery-popup">
-                                                <img src="img/couples/A27.webp"
-                                                    alt="Couples Photography - Romantic Story" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A28.webp" class="gallery-popup">
-                                                <img src="img/couples/A28.webp"
-                                                    alt="Couples Photography - Love Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A29.webp" class="gallery-popup">
-                                                <img src="img/couples/A29.webp"
-                                                    alt="Couples Photography - Beautiful Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/couples/A30jpg.webp" class="gallery-popup">
-                                                <img src="img/couples/A30jpg.webp"
-                                                    alt="Couples Photography - Sweet Love Story" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="row" id="couples-gallery">
+                                    <!-- Couples images will be loaded here -->
                                 </div>
                             </div>
                         </div>
@@ -847,123 +342,8 @@
                     <div class="row mt-5">
                         <div class="col-12">
                             <div class="portfolio_gallery masonry-gallery">
-                                <div class="row">
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/11fd2fc1-25d5-4602-8bc7-1483e6f662c6.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/11fd2fc1-25d5-4602-8bc7-1483e6f662c6.webp"
-                                                    alt="Proposal Photography - Perfect Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/1d3bdeba-33cd-45ae-b679-05921a556353.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/1d3bdeba-33cd-45ae-b679-05921a556353.webp"
-                                                    alt="Proposal Photography - Yes Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/2ca10fd6-febe-48d5-bcb0-8bbfde95adaa.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/2ca10fd6-febe-48d5-bcb0-8bbfde95adaa.webp"
-                                                    alt="Proposal Photography - Engagement Bliss" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/5c1521f0-0639-4605-9fb3-109a734af1f3.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/5c1521f0-0639-4605-9fb3-109a734af1f3.webp"
-                                                    alt="Proposal Photography - Special Proposal" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/678542f9-52ff-4cbe-a715-c54045e0eeea.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/678542f9-52ff-4cbe-a715-c54045e0eeea.webp"
-                                                    alt="Proposal Photography - Romantic Setting" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/75040554-dee2-4704-8b31-20f83cafc002.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/75040554-dee2-4704-8b31-20f83cafc002.webp"
-                                                    alt="Proposal Photography - Surprise Moment" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/7c4bb1b0-7783-48e4-8e1e-38495105be4e.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/7c4bb1b0-7783-48e4-8e1e-38495105be4e.webp"
-                                                    alt="Proposal Photography - Beautiful Memory" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/8101e39e-f414-45b2-9fac-6c85f63f3226.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/8101e39e-f414-45b2-9fac-6c85f63f3226.webp"
-                                                    alt="Proposal Photography - Love Declaration" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/proposal/b6086dfc-7d5b-4c51-b04b-32546a5d6a7a.webp"
-                                                class="gallery-popup">
-                                                <img src="img/proposal/b6086dfc-7d5b-4c51-b04b-32546a5d6a7a.webp"
-                                                    alt="Proposal Photography - Dream Proposal" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="row" id="proposal-gallery">
+                                    <!-- Proposal images will be loaded here -->
                                 </div>
                             </div>
                         </div>
@@ -997,222 +377,8 @@
                     <div class="row mt-5">
                         <div class="col-12">
                             <div class="portfolio_gallery masonry-gallery">
-                                <div class="row">
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A1.webp" class="gallery-popup">
-                                                <img src="img/family/A1.webp" alt="Family Photography - Family Bond"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A2.webp" class="gallery-popup">
-                                                <img src="img/family/A2.webp" alt="Family Photography - Generations"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A3.webp" class="gallery-popup">
-                                                <img src="img/family/A3.webp" alt="Family Photography - Family Portrait"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A4.webp" class="gallery-popup">
-                                                <img src="img/family/A4.webp" alt="Family Photography - Happy Moments"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A5.webp" class="gallery-popup">
-                                                <img src="img/family/A5.webp" alt="Family Photography - Togetherness"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A6.webp" class="gallery-popup">
-                                                <img src="img/family/A6.webp" alt="Family Photography - Precious Times"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A7.webp" class="gallery-popup">
-                                                <img src="img/family/A7.webp" alt="Family Photography - Family Joy"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A8.webp" class="gallery-popup">
-                                                <img src="img/family/A8.webp" alt="Family Photography - Sweet Family"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A9.webp" class="gallery-popup">
-                                                <img src="img/family/A9.webp" alt="Family Photography - Loving Family"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A10.webp" class="gallery-popup">
-                                                <img src="img/family/A10.webp"
-                                                    alt="Family Photography - Family Memories" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A11.webp" class="gallery-popup">
-                                                <img src="img/family/A11.webp"
-                                                    alt="Family Photography - Beautiful Family" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A12.webp" class="gallery-popup">
-                                                <img src="img/family/A12.webp"
-                                                    alt="Family Photography - Family Connection" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A13.webp" class="gallery-popup">
-                                                <img src="img/family/A13.webp" alt="Family Photography - Family Love"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A14.webp" class="gallery-popup">
-                                                <img src="img/family/A14.webp"
-                                                    alt="Family Photography - Family Happiness" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A15.webp" class="gallery-popup">
-                                                <img src="img/family/A15.webp"
-                                                    alt="Family Photography - Family Together" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A16.webp" class="gallery-popup">
-                                                <img src="img/family/A16.webp" alt="Family Photography - Family Bonding"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A17.webp" class="gallery-popup">
-                                                <img src="img/family/A17.webp" alt="Family Photography - Family Moments"
-                                                    class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-lg-4 col-md-6 mb-4">
-                                        <div class="single_gallery_item">
-                                            <a href="img/family/A18.webp" class="gallery-popup">
-                                                <img src="img/family/A18.webp"
-                                                    alt="Family Photography - Family Love Story" class="img-fluid">
-                                                <div class="gallery_overlay">
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="row" id="family-gallery">
+                                    <!-- Family images will be loaded here -->
                                 </div>
                             </div>
                         </div>
@@ -1311,6 +477,237 @@
     <script src="js/mail-script.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    
+    <!-- Lazy Loading Script -->
+    <script>
+        // Image data for each category
+        const imageData = {
+            wedding: [
+                { src: 'img/wedding/A1.webp', alt: 'Wedding Photography - Romantic Moment' },
+                { src: 'img/wedding/A2.webp', alt: 'Wedding Photography - Ceremony' },
+                { src: 'img/wedding/A3.webp', alt: 'Wedding Photography - Wedding Couple' },
+                { src: 'img/wedding/A4.webp', alt: 'Wedding Photography - Special Moment' },
+                { src: 'img/wedding/A5.webp', alt: 'Wedding Photography - Celebration' },
+                { src: 'img/wedding/A6.webp', alt: 'Wedding Photography - Bride and Groom' },
+                { src: 'img/wedding/A7.webp', alt: 'Wedding Photography - Intimate Moment' },
+                { src: 'img/wedding/A8.webp', alt: 'Wedding Photography - Love Story' },
+                { src: 'img/wedding/A9.webp', alt: 'Wedding Photography - Emotional Moment' },
+                { src: 'img/wedding/A10.webp', alt: 'Wedding Photography - Wedding Party' },
+                { src: 'img/wedding/A11.webp', alt: 'Wedding Photography - Reception' },
+                { src: 'img/wedding/A12.webp', alt: 'Wedding Photography - Dancing' },
+                { src: 'img/wedding/A13.webp', alt: 'Wedding Photography - Portrait' },
+                { src: 'img/wedding/A14.webp', alt: 'Wedding Photography - Ceremony Details' },
+                { src: 'img/wedding/A15.webp', alt: 'Wedding Photography - Family Photo' },
+                { src: 'img/wedding/A16.webp', alt: 'Wedding Photography - Bride Portrait' },
+                { src: 'img/wedding/A17.webp', alt: 'Wedding Photography - Groom Portrait' },
+                { src: 'img/wedding/A18.webp', alt: 'Wedding Photography - Wedding Rings' }
+            ],
+            couples: [
+                { src: 'img/couples/A1.webp', alt: 'Couples Photography - Romantic Couple' },
+                { src: 'img/couples/A2.webp', alt: 'Couples Photography - Love Story' },
+                { src: 'img/couples/A3.webp', alt: 'Couples Photography - Together Forever' },
+                { src: 'img/couples/A4.webp', alt: 'Couples Photography - Sweet Moments' },
+                { src: 'img/couples/A5.webp', alt: 'Couples Photography - Intimate Connection' },
+                { src: 'img/couples/A6.webp', alt: 'Couples Photography - Pure Love' },
+                { src: 'img/couples/A7.webp', alt: 'Couples Photography - Tender Embrace' },
+                { src: 'img/couples/A8.webp', alt: 'Couples Photography - Gentle Touch' },
+                { src: 'img/couples/A9.webp', alt: 'Couples Photography - Loving Gaze' },
+                { src: 'img/couples/A10.webp', alt: 'Couples Photography - Peaceful Moment' },
+                { src: 'img/couples/A11.webp', alt: 'Couples Photography - Shared Joy' },
+                { src: 'img/couples/A12.webp', alt: 'Couples Photography - Serene Connection' },
+                { src: 'img/couples/A13.webp', alt: 'Couples Photography - Beautiful Moment' },
+                { src: 'img/couples/A14.webp', alt: 'Couples Photography - Romantic Setting' },
+                { src: 'img/couples/A15.webp', alt: 'Couples Photography - Love Connection' },
+                { src: 'img/couples/A16.webp', alt: 'Couples Photography - Sweet Connection' },
+                { src: 'img/couples/A17.webp', alt: 'Couples Photography - Intimate Moment' },
+                { src: 'img/couples/A18.webp', alt: 'Couples Photography - Beautiful Love' },
+                { src: 'img/couples/A19.webp', alt: 'Couples Photography - Romantic Love' },
+                { src: 'img/couples/A20.webp', alt: 'Couples Photography - Love Story' },
+                { src: 'img/couples/A21.webp', alt: 'Couples Photography - Sweet Love' },
+                { src: 'img/couples/A22.webp', alt: 'Couples Photography - Beautiful Connection' },
+                { src: 'img/couples/A23.webp', alt: 'Couples Photography - Romantic Connection' },
+                { src: 'img/couples/A24.webp', alt: 'Couples Photography - Love Moment' },
+                { src: 'img/couples/A25.webp', alt: 'Couples Photography - Sweet Moment' },
+                { src: 'img/couples/A26.webp', alt: 'Couples Photography - Beautiful Love Story' },
+                { src: 'img/couples/A27.webp', alt: 'Couples Photography - Romantic Story' },
+                { src: 'img/couples/A28.webp', alt: 'Couples Photography - Love Connection' },
+                { src: 'img/couples/A29.webp', alt: 'Couples Photography - Beautiful Moment' },
+                { src: 'img/couples/A30jpg.webp', alt: 'Couples Photography - Sweet Love Story' }
+            ],
+            proposal: [
+                { src: 'img/proposal/11fd2fc1-25d5-4602-8bc7-1483e6f662c6.webp', alt: 'Proposal Photography - Perfect Moment' },
+                { src: 'img/proposal/1d3bdeba-33cd-45ae-b679-05921a556353.webp', alt: 'Proposal Photography - Yes Moment' },
+                { src: 'img/proposal/2ca10fd6-febe-48d5-bcb0-8bbfde95adaa.webp', alt: 'Proposal Photography - Engagement Bliss' },
+                { src: 'img/proposal/5c1521f0-0639-4605-9fb3-109a734af1f3.webp', alt: 'Proposal Photography - Special Proposal' },
+                { src: 'img/proposal/678542f9-52ff-4cbe-a715-c54045e0eeea.webp', alt: 'Proposal Photography - Romantic Setting' },
+                { src: 'img/proposal/75040554-dee2-4704-8b31-20f83cafc002.webp', alt: 'Proposal Photography - Surprise Moment' },
+                { src: 'img/proposal/7c4bb1b0-7783-48e4-8e1e-38495105be4e.webp', alt: 'Proposal Photography - Beautiful Memory' },
+                { src: 'img/proposal/8101e39e-f414-45b2-9fac-6c85f63f3226.webp', alt: 'Proposal Photography - Love Declaration' },
+                { src: 'img/proposal/b6086dfc-7d5b-4c51-b04b-32546a5d6a7a.webp', alt: 'Proposal Photography - Dream Proposal' }
+            ],
+            family: [
+                { src: 'img/family/A1.webp', alt: 'Family Photography - Family Bond' },
+                { src: 'img/family/A2.webp', alt: 'Family Photography - Generations' },
+                { src: 'img/family/A3.webp', alt: 'Family Photography - Family Portrait' },
+                { src: 'img/family/A4.webp', alt: 'Family Photography - Happy Moments' },
+                { src: 'img/family/A5.webp', alt: 'Family Photography - Togetherness' },
+                { src: 'img/family/A6.webp', alt: 'Family Photography - Precious Times' },
+                { src: 'img/family/A7.webp', alt: 'Family Photography - Family Joy' },
+                { src: 'img/family/A8.webp', alt: 'Family Photography - Sweet Family' },
+                { src: 'img/family/A9.webp', alt: 'Family Photography - Loving Family' },
+                { src: 'img/family/A10.webp', alt: 'Family Photography - Family Memories' },
+                { src: 'img/family/A11.webp', alt: 'Family Photography - Beautiful Family' },
+                { src: 'img/family/A12.webp', alt: 'Family Photography - Family Connection' },
+                { src: 'img/family/A13.webp', alt: 'Family Photography - Family Love' },
+                { src: 'img/family/A14.webp', alt: 'Family Photography - Family Happiness' },
+                { src: 'img/family/A15.webp', alt: 'Family Photography - Family Together' },
+                { src: 'img/family/A16.webp', alt: 'Family Photography - Family Bonding' },
+                { src: 'img/family/A17.webp', alt: 'Family Photography - Family Moments' },
+                { src: 'img/family/A18.webp', alt: 'Family Photography - Family Love Story' }
+            ]
+        };
+
+        // Track loaded galleries
+        const loadedGalleries = new Set();
+
+        // Function to create gallery item HTML
+        function createGalleryItem(imageData) {
+            return `
+                <div class="col-6 col-lg-4 col-md-6 mb-4">
+                    <div class="single_gallery_item">
+                        <a href="${imageData.src}" class="gallery-popup">
+                            <div class="lazy-image-container">
+                                <img src="${imageData.src}" alt="${imageData.alt}" class="img-fluid lazy-image" loading="lazy">
+                                <div class="loading-placeholder">Loading...</div>
+                            </div>
+                            <div class="gallery_overlay"></div>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to load gallery images
+        function loadGallery(category) {
+            if (loadedGalleries.has(category)) {
+                return; // Already loaded
+            }
+
+            const galleryContainer = document.getElementById(`${category}-gallery`);
+            if (!galleryContainer) {
+                return;
+            }
+
+            const images = imageData[category];
+            if (!images) {
+                return;
+            }
+
+            // Create and append gallery items
+            images.forEach(image => {
+                galleryContainer.innerHTML += createGalleryItem(image);
+            });
+
+            // Mark as loaded
+            loadedGalleries.add(category);
+
+            // Initialize lazy loading for images
+            initializeLazyLoading();
+            
+            // Reinitialize magnific popup for new images
+            if (typeof $.fn.magnificPopup !== 'undefined') {
+                // Destroy existing popup instances first
+                try {
+                    $('.gallery-popup').magnificPopup('close');
+                } catch (e) {
+                    // Silent fail if no popup to close
+                }
+                
+                // Initialize new popup instances
+                setTimeout(() => {
+                    $('.gallery-popup').magnificPopup({
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                }, 200);
+            }
+        }
+
+        // Function to initialize lazy loading
+        function initializeLazyLoading() {
+            const lazyImages = document.querySelectorAll('.lazy-image:not(.loaded)');
+            
+            lazyImages.forEach((img, index) => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                    const placeholder = img.parentElement.querySelector('.loading-placeholder');
+                    if (placeholder) {
+                        placeholder.style.display = 'none';
+                    }
+                } else {
+                    img.addEventListener('load', function() {
+                        this.classList.add('loaded');
+                        const placeholder = this.parentElement.querySelector('.loading-placeholder');
+                        if (placeholder) {
+                            placeholder.style.display = 'none';
+                        }
+                    });
+                    
+                    img.addEventListener('error', function() {
+                        const placeholder = this.parentElement.querySelector('.loading-placeholder');
+                        if (placeholder) {
+                            placeholder.textContent = 'Image not available';
+                        }
+                    });
+                }
+            });
+        }
+
+        // Tab change event handler
+        $(document).ready(function() {
+            // Load wedding gallery on page load (default active tab)
+            loadGallery('wedding');
+
+            // Simple and reliable tab change detection
+            function handleTabChange() {
+                const activeTab = $('.tab-pane.active').attr('id');
+                if (activeTab) {
+                    loadGallery(activeTab);
+                }
+            }
+
+            // Handle tab changes using click events
+            $('a[data-toggle="tab"]').on('click', function (e) {
+                const target = $(this).attr('href').substring(1); // Remove the #
+                
+                // Wait for tab to be shown, then load gallery
+                setTimeout(() => {
+                    handleTabChange();
+                }, 150);
+            });
+
+            // Also listen for Bootstrap tab events
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                const target = $(e.target).attr('href').substring(1); // Remove the #
+                loadGallery(target);
+            });
+
+            // Fallback: check active tab every 500ms
+            setInterval(handleTabChange, 500);
+
+            // Initialize magnific popup for initial images
+            if (typeof $.fn.magnificPopup !== 'undefined') {
+                $('.gallery-popup').magnificPopup({
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
