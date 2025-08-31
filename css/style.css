@@ -7356,9 +7356,32 @@ h6 {
 .category_cta a{
   margin-top: 20px;
   display: block;
-  color: #995433 !important;
-  text-decoration: underline;
+  background-color: #995433 !important;
+  color: #fff;
+  max-width: max-content;
+  padding: 15px 25px;
+  border-radius: 25px;
+  position: relative;
 }
+
+.category_cta a:hover {
+  background-color: #874729 !important;
+}
+
+.category_cta a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* .category_cta a::before {
+  content: "\f232";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 10px;
+} */
+
+
 
 /* Portfolio Gallery Styling */
 .portfolio_gallery .single_gallery_item {
