@@ -1,0 +1,6 @@
+# Protect SQLite database from direct download
+<Files ~ "\.(sqlite|sqlite3|db)$">
+    Order allow,deny
+    Deny from all
+</Files>
+Deny from all
